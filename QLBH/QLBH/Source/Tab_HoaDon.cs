@@ -13,7 +13,7 @@ namespace QLBH
 {
     public partial class Form_Main : Form
     {
-       
+    
         private void setFont_HD() // set Font cho các textBox 
         {
             txtBox_mahd_HD.Font = new Font("Time New Roman", 12);
@@ -56,16 +56,14 @@ namespace QLBH
             dgv_HD.AllowUserToAddRows = false;
             dgv_HD.EditMode = DataGridViewEditMode.EditProgrammatically;
 
-            
+    
         }
 
         private void tabHoaDon_Enter(object sender, EventArgs e) // tải dữ liệu khi vào tab
-        {           
-           
-
+        {  
             setFont_HD();
             ResetValues_HD();
- 
+       
             LoadData_HoaDon();
             btn_xemchitiet_HD.Enabled = false;
         }
@@ -91,7 +89,12 @@ namespace QLBH
         private void btn_xemchitiet_HD_Click(object sender, EventArgs e) // xử lí khi click vào nút xem chi tiết
         {
 
-            
+            // load form chi tiết hoá đơn lên
+            Form_ChiTietHoaDon form_chitiethoadon = new Form_ChiTietHoaDon();
+            form_chitiethoadon.StartPosition = FormStartPosition.CenterParent;
+            form_chitiethoadon.mode_chitiethoadon_CTDH = true;
+            form_chitiethoadon.mahd_CTHD = txtBox_mahd_HD.Text.Trim().ToString();
+            form_chitiethoadon.ShowDialog();
         }
 
         private void btn_them_HD_Click(object sender, EventArgs e) // xử lí khi click vào nút thêm

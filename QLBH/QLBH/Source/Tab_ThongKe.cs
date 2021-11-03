@@ -13,7 +13,7 @@ namespace QLBH
 {
     public partial class Form_Main : Form
     {
-        
+      
         String[] year = { "2020", "2021" };
         String currYear = "2021";
         private void setFont_DThu() // set Font cho các textBox 
@@ -149,8 +149,7 @@ namespace QLBH
             setFont_DThu();
             ResetValues_DThu();
 
-           
-
+          
             LoadData_DThu();
         }
 
@@ -163,7 +162,7 @@ namespace QLBH
                 return;
             }
 
-
+         
             LoadData_DThu();
         }
 
