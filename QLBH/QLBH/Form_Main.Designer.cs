@@ -288,7 +288,8 @@
             this.tabThongKe.TabIndex = 1;
             this.tabThongKe.Text = "   Thống Kê   ";
             this.tabThongKe.UseVisualStyleBackColor = true;
-           
+            this.tabThongKe.Enter += new System.EventHandler(this.tabThongKe_Enter);
+            this.tabThongKe.Leave += new System.EventHandler(this.tabThongKe_Leave);
             // 
             // btn_search_TK
             // 
@@ -298,7 +299,7 @@
             this.btn_search_TK.Size = new System.Drawing.Size(45, 29);
             this.btn_search_TK.TabIndex = 57;
             this.btn_search_TK.UseVisualStyleBackColor = true;
-           
+            this.btn_search_TK.Click += new System.EventHandler(this.btn_search_TK_Click);
             // 
             // cbBox_nam_TK
             // 
@@ -311,7 +312,7 @@
             this.cbBox_nam_TK.Size = new System.Drawing.Size(181, 30);
             this.cbBox_nam_TK.TabIndex = 56;
             this.cbBox_nam_TK.Text = "2021";
-          
+            this.cbBox_nam_TK.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cbBox_nam_TK_DrawItem);
             // 
             // txtBox_thang_TK
             // 
@@ -361,7 +362,7 @@
             this.dgv_DThu.RowTemplate.Height = 24;
             this.dgv_DThu.Size = new System.Drawing.Size(945, 427);
             this.dgv_DThu.TabIndex = 51;
-           
+            this.dgv_DThu.Click += new System.EventHandler(this.dgv_DTh_Click);
             // 
             // txtBox_slhoadon_TK
             // 

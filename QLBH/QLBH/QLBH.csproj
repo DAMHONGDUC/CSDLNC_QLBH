@@ -58,6 +58,9 @@
     <Compile Include="Source\Tab_HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Source\Tab_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
