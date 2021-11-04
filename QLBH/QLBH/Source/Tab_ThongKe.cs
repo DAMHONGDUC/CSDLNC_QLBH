@@ -121,6 +121,7 @@ namespace QLBH
             dgv_DThu.AllowUserToAddRows = false;
             dgv_DThu.EditMode = DataGridViewEditMode.EditProgrammatically;
 
+           
         }
         private void dgv_DTh_Click(object sender, EventArgs e) // khi click vào dataGridView
         {
@@ -149,7 +150,6 @@ namespace QLBH
             setFont_DThu();
             ResetValues_DThu();
 
-          
             LoadData_DThu();
         }
 
@@ -161,8 +161,7 @@ namespace QLBH
                 MessageBox.Show("Bạn chưa chọn năm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-         
+           
             LoadData_DThu();
         }
 
