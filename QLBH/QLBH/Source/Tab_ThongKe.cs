@@ -13,7 +13,7 @@ namespace QLBH
 {
     public partial class Form_Main : Form
     {
-      
+        Form_Loading form_loading2 = new Form_Loading();
         String[] year = { "2020", "2021" };
         String currYear = "2021";
         private void setFont_DThu() // set Font cho các textBox 
@@ -121,7 +121,7 @@ namespace QLBH
             dgv_DThu.AllowUserToAddRows = false;
             dgv_DThu.EditMode = DataGridViewEditMode.EditProgrammatically;
 
-           
+            form_loading2.Close_Form();
         }
         private void dgv_DTh_Click(object sender, EventArgs e) // khi click vào dataGridView
         {
@@ -150,6 +150,15 @@ namespace QLBH
             setFont_DThu();
             ResetValues_DThu();
 
+            Thread t = new Thread(() =>
+            {
+                form_loading2.StartPosition = FormStartPosition.CenterParent;
+                form_loading2.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             LoadData_DThu();
         }
 
@@ -161,7 +170,16 @@ namespace QLBH
                 MessageBox.Show("Bạn chưa chọn năm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-           
+
+            Thread t = new Thread(() =>
+            {
+                form_loading2.StartPosition = FormStartPosition.CenterParent;
+                form_loading2.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             LoadData_DThu();
         }
 

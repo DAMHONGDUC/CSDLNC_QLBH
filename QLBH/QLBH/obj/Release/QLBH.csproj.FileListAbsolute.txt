@@ -1,0 +1,12 @@
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\bin\Release\QLBH.exe.config
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\bin\Release\QLBH.exe
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\bin\Release\QLBH.pdb
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.csprojAssemblyReference.cache
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.Form_ChiTietHoaDon.resources
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.Form_Loading.resources
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.Form_Main.resources
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.Properties.Resources.resources
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.csproj.GenerateResource.cache
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.csproj.CoreCompileInputs.cache
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.exe
+C:\Users\Dam Hong Duc\Desktop\final\QLBH\obj\Release\QLBH.pdb
