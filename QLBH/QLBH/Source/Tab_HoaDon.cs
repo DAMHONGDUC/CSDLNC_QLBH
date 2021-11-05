@@ -99,12 +99,39 @@ namespace QLBH
         private void btn_xemchitiet_HD_Click(object sender, EventArgs e) // xử lí khi click vào nút xem chi tiết
         {
 
-           
+            // load form chi tiết hoá đơn lên
+            Form_ChiTietHoaDon form_chitiethoadon = new Form_ChiTietHoaDon();
+            form_chitiethoadon.StartPosition = FormStartPosition.CenterParent;
+            form_chitiethoadon.mode_chitiethoadon_CTDH = true;
+            form_chitiethoadon.mahd_CTHD = txtBox_mahd_HD.Text.Trim().ToString();
+            form_chitiethoadon.ShowDialog();
         }
 
         private void btn_them_HD_Click(object sender, EventArgs e) // xử lí khi click vào nút thêm
         {
-            
+            // load form thêm hoá đơn lên
+            Form_ChiTietHoaDon form_chitiethoadon = new Form_ChiTietHoaDon();
+            form_chitiethoadon.StartPosition = FormStartPosition.CenterParent;
+            form_chitiethoadon.mode_themhoadon_CTDH = true;
+            form_chitiethoadon.ShowDialog();
+
+            // nếu có thêm thì load lại dữ liệu vào dataGridView
+            if (form_chitiethoadon.is_themthanhcong)
+            {
+                Thread t = new Thread(() =>
+                {
+                    form_loading.StartPosition = FormStartPosition.CenterParent;
+                    form_loading.ShowDialog();
+                });
+                form_chitiethoadon.is_themthanhcong = false;
+
+                // show form loading         
+                t.Start();
+
+                LoadData_HoaDon();
+                ResetValues_HD();
+                btn_xemchitiet_HD.Enabled = false;
+            }
         }
 
         private void btn_huy_HD_Click(object sender, EventArgs e) // xử khi khi click nút huỷ
